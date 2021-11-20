@@ -2320,6 +2320,11 @@ int FuncDef()
 		}
 		while(quanjuDecl()>0)
 		{
+			
+			while(letter[num]=="block")
+			{
+				num++;
+			}
 			j=num;
 		}
 		num=j;
