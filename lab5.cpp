@@ -859,20 +859,21 @@ int Stmt(int index)
 	{
 		num++;
 		blocknum++;
+		int newindex=blocknum;
 		while(letter[num]=="block")
 		{
 			num++;
 		}
-		identstable[blocknum].outnum=index;
-		identstable[blocknum].top=0;
-		if(Blockitem(blocknum)>0)
+		identstable[newindex].outnum=index;
+		identstable[newindex].top=0;
+		if(Blockitem(newindex)>0)
 		{
 			while(letter[num]=="block")
 			{
 				num++;
 			}
 			int x=num;
-			while(Blockitem(blocknum)>0)
+			while(Blockitem(newindex)>0)
 			{
 				while(letter[num]=="block")
 				{
